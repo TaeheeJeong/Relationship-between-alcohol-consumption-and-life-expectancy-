@@ -1,0 +1,29 @@
+# Test a linear regression model and summarize the results
+
+The regression coefficient is 0.6180, which shows strong positive correlation.
+THe p value is <0.005.
+
+
+OLS regression model for the association between alcohol consumption and life expectancy
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         lifeexpectancy   R-squared:                       0.098
+Model:                            OLS   Adj. R-squared:                  0.093
+Method:                 Least Squares   F-statistic:                     18.90
+Date:                Wed, 29 Jun 2016   Prob (F-statistic):           2.34e-05
+Time:                        18:17:58   Log-Likelihood:                -642.36
+No. Observations:                 176   AIC:                             1289.
+Df Residuals:                     174   BIC:                             1295.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [95.0% Conf. Int.]
+----------------------------------------------------------------------------------
+Intercept       1.443e-14      0.706   2.05e-14      1.000        -1.393     1.393
+alcconsumption     0.6180      0.142      4.347      0.000         0.337     0.899
+==============================================================================
+Omnibus:                       17.109   Durbin-Watson:                   1.833
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               19.145
+Skew:                          -0.779   Prob(JB):                     6.96e-05
+Kurtosis:                       2.574   Cond. No.                         4.96
+==============================================================================
