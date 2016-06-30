@@ -1,0 +1,32 @@
+# centering variables
+
+# subset of data
+features=['alcconsumption','lifeexpectancy']
+sub1=data[features]
+
+# remove row with NA
+sub1_clean=sub1.dropna()
+
+alcoh_mean=sub1_clean['alcconsumption'].mean()
+life_mean=sub1_clean['lifeexpectancy'].mean()
+
+sub2=sub1_clean.copy()
+
+sub2['alcconsumption']=sub2['alcconsumption'].apply(lambda x:x-alcoh_mean)
+sub2['lifeexpectancy']=sub2['lifeexpectancy'].apply(lambda x:x-life_mean)
+
+## output
+
+#before centering, the mean value of each varible
+sub1_clean.alcconsumption.mean()
+Out[32]: 6.646250000000001
+
+sub1_clean.lifeexpectancy.mean()
+Out[33]: 69.1436818181818
+
+#after centering, the mean value of each variable
+sub2.alcconsumption.mean()
+Out[30]: -1.148071536828287e-15
+
+sub2.lifeexpectancy.mean()
+Out[31]: 1.4291598207902014e-14
